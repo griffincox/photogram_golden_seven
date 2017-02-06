@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # UPDATE
 
   # DESTROY
+  get("/delete_photo/:id", { :controller => "photos", :action => "delete_photo" })
 end

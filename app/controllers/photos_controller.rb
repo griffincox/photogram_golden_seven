@@ -11,5 +11,13 @@ class PhotosController < ApplicationController
     render("show.html.erb")
   end
 
+  def delete_photo
+    @photo_id = params[:id]
+    @photo = Photo.find(@photo_id)
+    @photo.destroy
+    @list_of_photos = Photo.all
+    render("index.html.erb")
+  end
+
 
 end
